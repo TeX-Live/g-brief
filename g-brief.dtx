@@ -1,5 +1,5 @@
-\def\filedate{2008/07/15}
-\def\fileversion{4.0.2}
+\def\filedate{2019/03/14}
+\def\fileversion{4.0.3}
 %
 %
 %\iffalse
@@ -36,6 +36,10 @@
 % version 4.0.2 to CTAN.  \Telefon is now redefined after loading
 % marvosym, and a brace mismatch.  Debian bugs 423919, 407968, patch at
 % http://svn.debian.org/wsvn/debian-tex/texlive-new/trunk/texlive-extra/debian/patches/g-brief-fix?op=file&rev=0&sc=0
+%
+% 2019-03-14 norbert@preining.info -- trying to write multiple letters
+% in the same document fails due to multiple \newcounter calls. Fix this.
+% Uploaded as 4.0.3 with permission from Michael.
 % 
 %\fi
 %
@@ -461,6 +465,14 @@
 %   zu einem ClassError.\\
 %   Bei einer fehlender Definition von \verb/\Unterschrift{}/ kam es in den
 %   bisherigen Versionen zu einem Fehler.
+%
+%\item[Version 4.0.2:] Kompatibilit\"at mit marvosym dass auch 
+%   \verb/\Telefon/ definiert. Fix f\"ur unbalancierte geschweifte Klammern.
+%   (Karl Berry)
+%
+%\item[Version 4.0.3:] Unterst\"utzung von mehreren Briefen im gleichen 
+%   Dokument. (Norbert Preining)
+%
 %\end{description}
 %
 %\section{\"Anderungen}
@@ -1237,7 +1249,8 @@
     \unitlength1mm
     \begin{picture}(0,0)
       \put(-9,0){\parbox{180mm}{
-        \tiny \newcounter{blockzahl} \def\@blockbreite{170mm}
+        \ifx\c@blockzahl\undefined\newcounter{blockzahl}\else\setcounter{blockzahl}{0}\fi
+        \tiny \def\@blockbreite{170mm}
         \iftrennlinien \rule{180mm}{0.5pt} \fi
         \ifthenelse{
           \equal{\namezeilea}{\empty} \and \equal{\namezeileb}{\empty} \and
