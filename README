@@ -1,0 +1,23 @@
+README for g-brief (english)
+============================
+g-brief is used to format letters in A4 format using LaTeX2e and LaTeX 2.09
+compatibility mode of LaTeX2e. Both German and English is supported.
+
+LIESMICH für g-brief (deutsch)
+==============================
+Der g-brief dient zur Formatierung vordruckloser Briefe im A4-Format unter
+LaTeX2e und dem LaTeX 2.09 Kompabilitätsmodus von LaTeX2e. Unterstützt
+werden dabei sowohl die deutsche als auch die englische Sprache.
+Soweit in dieser Beschreibung nicht anders angegeben, gelten die im LaTeX-
+Manual von Lamport beschriebenen Regeln und Befehle für LaTeX bzw. die
+im "LaTeX2e for authors" vom LaTeX3 3 Project Team oder "Der LaTeX
+Begleiter” von M. Goossens/F. Mittelbach/A. Samarin für LaTeX2e.
+
+Maintainer, License, Copyright
+==============================
+Copyright (C) 1991-2003, 2008 Michael Lenzen.
+
+It may be distributed under the terms of the LaTeX Project Public
+License (LPPL), as described in lppl.txt in the base LaTeX distribution.
+Either version 1.1 or, at your option, any later version.
+
