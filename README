@@ -1,7 +1,7 @@
 README for g-brief (english)
 ============================
-g-brief is used to format letters in A4 format using LaTeX2e and LaTeX 2.09
-compatibility mode of LaTeX2e. Both German and English is supported.
+g-brief is a document class for LaTeX 2e and serves for
+formatting formless letters in german or english language.
 
 LIESMICH für g-brief (deutsch)
 ==============================
